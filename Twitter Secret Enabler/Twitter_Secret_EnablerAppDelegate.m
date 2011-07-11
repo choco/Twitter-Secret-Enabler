@@ -124,13 +124,12 @@
     NSString *licenseString = [NSString stringWithFormat:@"macheist%@", licenseCode];
     
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults addSuiteNamed:@"com.twitter.twitter-mac"];
-    NSMutableDictionary *twitterPlist = [[defaults dictionaryRepresentation] mutableCopy];
+    NSMutableDictionary *twitterPlist = [[defaults persistentDomainForName:@"com.twitter.twitter-mac"] mutableCopy];
     [twitterPlist removeObjectsForKeys:[NSArray arrayWithObjects:@"reg.email3", @"reg.license3", nil]];
     [twitterPlist setObject:[emailText stringValue] forKey:@"reg.email3"];
     [twitterPlist setObject:licenseString forKey:@"reg.license3"];
     
-    [defaults registerDefaults:twitterPlist];
+    [defaults setPersistentDomain:twitterPlist forName:@"com.twitter.twitter-mac"];
     [twitterPlist release];
     
     [patchButton setTitle:@"Done!"];
