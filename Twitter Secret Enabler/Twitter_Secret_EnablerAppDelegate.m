@@ -1,16 +1,38 @@
-//
-//  Twitter_Secret_EnablerAppDelegate.m
-//  Twitter Secret Enabler
-//
-//  Created by Enrico Ghirardi on 10/07/11.
-//  Copyright 2011 !cHoco Code. All rights reserved.
-//
+/*
+ Twitter_Secret_EnablerAppDelegate.m
+ Twitter Secret Enabler
+ 
+ Created by Enrico Ghirardi on 10/07/11.
+ 
+ Copyright 2011 Enrico "cHoco" Ghirardi
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this work except in compliance with the License.
+ You may obtain a copy of the License in the LICENSE file, or at:
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
 
 #import "Twitter_Secret_EnablerAppDelegate.h"
 
 @implementation Twitter_Secret_EnablerAppDelegate
 
 @synthesize window, emailText, moreInfoLabel, patchButton;
+
+- (void)dealloc
+{
+    [moreInfoLabel release];
+    [patchButton release];
+    [emailText release];
+    [window release];
+    [super dealloc];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -95,7 +117,6 @@
 {
     NSString *licenseCode = [self calculateLicense:[emailText stringValue]];
     NSString *licenseString = [NSString stringWithFormat:@"macheist%@", licenseCode];
-    NSLog(@"%@", licenseString);
     
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     [defaults addSuiteNamed:@"com.twitter.twitter-mac"];
@@ -105,6 +126,8 @@
     [twitterPlist setObject:licenseString forKey:@"reg.license3"];
     
     [defaults registerDefaults:twitterPlist];
+    [twitterPlist release];
+    
     [patchButton setTitle:@"Done!"];
     [patchButton setEnabled:NO];
 }

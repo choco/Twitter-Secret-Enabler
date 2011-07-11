@@ -14,6 +14,7 @@
 		3B20B8F313C999B9001B3593 /* Twitter_Secret_EnablerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20B8F213C999B9001B3593 /* Twitter_Secret_EnablerAppDelegate.m */; };
 		3B20B8F613C999B9001B3593 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B20B8F413C999B9001B3593 /* MainMenu.xib */; };
 		3B20B9EF13C9B329001B3593 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20B9EE13C9B329001B3593 /* INAppStoreWindow.m */; };
+		3B35874213CAF71C007DF99E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B35874113CAF71C007DF99E /* README.md */; };
 		3B4C6F1513CA3E780053BE86 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C6F1413CA3E780053BE86 /* NSAttributedString+Hyperlink.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		3B20B8F513C999B9001B3593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3B20B9ED13C9B329001B3593 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		3B20B9EE13C9B329001B3593 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		3B35874113CAF71C007DF99E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3B4C6F1313CA3E780053BE86 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		3B4C6F1413CA3E780053BE86 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +54,7 @@
 		3B20B8D013C999B9001B3593 = {
 			isa = PBXGroup;
 			children = (
+				3B35874113CAF71C007DF99E /* README.md */,
 				3B20B8E513C999B9001B3593 /* Twitter Secret Enabler */,
 				3B20B8DE13C999B9001B3593 /* Frameworks */,
 				3B20B8DC13C999B9001B3593 /* Products */,
@@ -165,6 +168,7 @@
 				3B20B8EA13C999B9001B3593 /* InfoPlist.strings in Resources */,
 				3B20B8F013C999B9001B3593 /* Credits.rtf in Resources */,
 				3B20B8F613C999B9001B3593 /* MainMenu.xib in Resources */,
+				3B35874213CAF71C007DF99E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
