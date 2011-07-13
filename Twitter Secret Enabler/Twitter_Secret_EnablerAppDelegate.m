@@ -45,7 +45,6 @@
     
     INAppStoreWindow *aWindow = (INAppStoreWindow*)self.window;
     aWindow.titleBarHeight = 36;
-    aWindow.trafficLightAlignment = 1;
     [self.window center];
     
     NSTextField *titleLabel;
