@@ -48,23 +48,9 @@
     [self.window center];
     
     NSTextField *titleLabel;
-    NSTextField *titleLabelShadow;
-    NSString *titleText = @"Twitter Secret Enabler";
-    
-    titleLabelShadow = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 10, 240, 17)];
-    [titleLabelShadow setStringValue:titleText];
-    [titleLabelShadow setAlignment:NSRightTextAlignment];
-    [titleLabelShadow setTextColor:[NSColor colorWithCalibratedWhite:0.9 alpha:1]];
-    [titleLabelShadow setFont:[NSFont fontWithName:@"Lucida Grande" size:14]];
-    [titleLabelShadow setBezeled:NO];
-    [titleLabelShadow setDrawsBackground:NO];
-    [titleLabelShadow setEditable:NO];
-    [titleLabelShadow setSelectable:NO];
-    [aWindow.titleBarView addSubview:titleLabelShadow];
-    [titleLabelShadow release];
-
     titleLabel = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 11, 240, 17)];
-    [titleLabel setStringValue:titleText];
+    [titleLabel.cell setBackgroundStyle:NSBackgroundStyleRaised];
+    [titleLabel setStringValue:@"Twitter Secret Enabler"];
     [titleLabel setAlignment:NSRightTextAlignment];
     [titleLabel setFont:[NSFont fontWithName:@"Lucida Grande" size:14]];
     [titleLabel setTextColor:[NSColor colorWithCalibratedWhite:0.15 alpha:1]];
@@ -79,7 +65,7 @@
     [moreInfoLabel setSelectable:YES];
     NSURL* url = [NSURL URLWithString:@"http://twitter.com/icHoco"];
     NSMutableAttributedString* string = [[NSMutableAttributedString alloc] init];
-    [string appendAttributedString:[NSAttributedString hyperlinkFromString:@"@cHoco" withURL:url]];
+    [string appendAttributedString:[NSAttributedString hyperlinkFromString:@"cHoco" withURL:url]];
     [moreInfoLabel setAttributedStringValue:string];
     [string release];
 }

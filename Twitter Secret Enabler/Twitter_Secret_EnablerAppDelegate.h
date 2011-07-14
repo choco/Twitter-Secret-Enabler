@@ -23,6 +23,7 @@
 #import <Cocoa/Cocoa.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "INAppStoreWindow.h"
+#import "NSAttributedString+Hyperlink.h"
 
 @interface Twitter_Secret_EnablerAppDelegate : NSObject <NSApplicationDelegate> {
 @private

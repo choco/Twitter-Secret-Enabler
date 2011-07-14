@@ -21,7 +21,7 @@
 
 #import "NSAttributedString+Hyperlink.h"
 
-@implementation NSAttributedString (Hyperlink)
+@implementation NSAttributedString (NSAttributedString_Hyperlink)
 
 +(id)hyperlinkFromString:(NSString*)inString withURL:(NSURL*)aURL
 {
